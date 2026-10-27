@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Games & guild hubs — Lurking Light</title>
+<meta name="description" content="Per-game guild hubs for Lurking Light: WoW Forever, Retail, and more.">
+<meta name="theme-color" content="#0E1B26">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-face="guild" data-page="games" data-quest-page="games">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="snow" aria-hidden="true"></canvas>
+<div id="spot" aria-hidden="true"></div>
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Lurking Light home">
+    <img src="assets/mark.svg" alt="" width="36" height="36" id="navMark">
+    <span class="wordmark"><span class="w-l">LURKING</span> <span class="w-r">LIGHT</span></span>
+  </a>
+  <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="studio.html">Studio</a></li><li><a href="guild.html">Guild</a></li><li><a href="forums.html">Forums</a></li><li><a href="wiki.html">Wiki</a></li><li><a href="games.html" class="active" aria-current="page">Games</a></li><li><a href="account.html" class="soon-link" title="Accounts are not built yet">Account <span class="soon-tag mono">soon</span></a></li></ul></nav>
+  <button class="hud" id="hudBtn" aria-haspopup="dialog" aria-controls="profile" title="Your glow">
+    <span class="hud-rank" id="hudRank">Lurker</span>
+    <span class="hud-bar"><span id="hudFill"></span></span>
+    <span class="hud-xp mono"><span id="hudXp">0</span> glow</span>
+  </button>
+</header>
+<main id="main">
+<section class="page-head">
+  <p class="eyebrow mono">// games &amp; guild hubs</p>
+  <h1>One hub per game.</h1>
+  
+  <p class="lede">Each game the guild plays gets its own hub: who leads it, how to reach them, the roster, and events. Hubs are shells for now: the structure is here, the data comes later.</p>
+</section>
+<section class="section tight" data-quest="games">
+  <div class="hub-grid">
+    <a class="panel hub-card" href="hubs/forever.html" style="--c:#8DBAB8">
+      <div class="art" aria-hidden="true"></div>
+      <span class="status mono">● hub shell</span><h3>WoW Forever</h3>
+      <p>Raids, alts, and the long completion grind. Home of the progress addon idea.</p>
+      <span class="hub-go mono">open hub →</span></a>
+    <a class="panel hub-card" href="hubs/retail.html" style="--c:#5f7f8f">
+      <div class="art" aria-hidden="true"></div>
+      <span class="status mono">● hub shell</span><h3>WoW Retail</h3>
+      <p>Current-season keys, raid nights, and "one more run."</p>
+      <span class="hub-go mono">open hub →</span></a>
+    <div class="panel hub-card empty" style="--c:#a58f6b">
+      <div class="art" aria-hidden="true"></div>
+      <span class="status mono">○ open slot</span><h3>Tabletop</h3>
+      <p>Friday one-shots and campaigns. Hub when it needs one.</p>
+      <span class="hub-go mono dim">not yet</span></div>
+    <div class="panel hub-card empty" style="--c:#24405a">
+      <div class="art" aria-hidden="true"></div>
+      <span class="status mono">○ open slot</span><h3>Your game here</h3>
+      <p>Enough of you playing something? Ask in Discord and we'll spin up a hub.</p>
+      <span class="hub-go mono dim">ask in Discord</span></div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="foot-brand">
+    <img src="assets/mark.svg" alt="" width="40" height="40">
+    <p class="wordmark"><span class="w-l">LURKING</span> <span class="w-r">LIGHT</span></p>
+    <p class="dim">Stories, games, and the nerds who make them. © <span id="yr">2026</span> Lurking Light.</p>
+  </div>
+  <div class="sitemap">
+    <div><h4 class="mono">public</h4><ul>
+      <li><a href="index.html">Home &amp; lobby</a></li><li><a href="studio.html">Studio</a></li>
+      <li><a href="guild.html">Guild</a></li><li><a href="forums.html">Forums (preview)</a></li>
+      <li><a href="wiki.html">Wiki</a></li><li><a href="games.html">Games &amp; guild hubs</a></li></ul></div>
+    <div><h4 class="mono">coming later</h4><ul>
+      <li><a href="account.html">Account</a></li><li><a href="wiki-dev.html">Dev wiki</a></li>
+      <li><a href="hubs/forever.html">WoW Forever hub</a></li><li><a href="hubs/retail.html">Retail hub</a></li>
+      <li><a href="tools/index.html">Tools</a></li></ul></div>
+  </div>
+  <p class="mono dim tiny">psst: the lure likes being poked. and old cheat codes still work.</p>
+</footer>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<dialog id="profile" class="dialog" aria-labelledby="profTitle">
+  <h3 id="profTitle">Your glow</h3>
+  <p>You earn glow by poking around: visiting each part of the site, RSVPing to Friday Hang, posting and giving sparks in the forums. It's saved in this browser only. Real accounts come later.</p>
+  <ul class="quests" id="quests"></ul>
+  <form method="dialog"><button class="btn small">Back to the dark</button></form>
+</dialog>
+<img src="assets/lurker-sprite.png" alt="" class="swimmer" id="swimmer" aria-hidden="true">
+<script src="app.js"></script>
+</body>
+</html>

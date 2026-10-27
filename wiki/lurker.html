@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lurker — Lurking Light Wiki</title>
+<meta name="description" content="Lurking Light wiki: Lurker">
+<meta name="theme-color" content="#0E1B26">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="../assets/mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body data-face="guild" data-page="wiki" data-quest-page="wiki">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="snow" aria-hidden="true"></canvas>
+<div id="spot" aria-hidden="true"></div>
+<header class="nav">
+  <a class="brand" href="../index.html" aria-label="Lurking Light home">
+    <img src="../assets/mark.svg" alt="" width="36" height="36" id="navMark">
+    <span class="wordmark"><span class="w-l">LURKING</span> <span class="w-r">LIGHT</span></span>
+  </a>
+  <nav aria-label="Main"><ul><li><a href="../index.html">Home</a></li><li><a href="../studio.html">Studio</a></li><li><a href="../guild.html">Guild</a></li><li><a href="../forums.html">Forums</a></li><li><a href="../wiki.html" class="active" aria-current="page">Wiki</a></li><li><a href="../games.html">Games</a></li><li><a href="../account.html" class="soon-link" title="Accounts are not built yet">Account <span class="soon-tag mono">soon</span></a></li></ul></nav>
+  <button class="hud" id="hudBtn" aria-haspopup="dialog" aria-controls="profile" title="Your glow">
+    <span class="hud-rank" id="hudRank">Lurker</span>
+    <span class="hud-bar"><span id="hudFill"></span></span>
+    <span class="hud-xp mono"><span id="hudXp">0</span> glow</span>
+  </button>
+</header>
+<main id="main">
+<section class="section tight wiki-article-wrap" data-quest="wiki">
+  <nav class="crumbs mono" aria-label="Breadcrumb"><a href="../wiki.html">wiki</a> / <span>lore</span> / <span class="cream">Lurker</span></nav>
+  <div class="article-grid">
+    <aside class="panel article-toc"><h4 class="mono">on this page</h4><ol><li><a href="#who">Who he is</a></li><li><a href="#lure">The lure</a></li><li><a href="#appearances">Where he shows up</a></li></ol>
+      <h4 class="mono">more pages</h4><ul><li><a href="friday-hang.html">Friday Hang</a></li><li><a href="glow-and-ranks.html">Glow &amp; ranks</a></li><li><a href="project-gray.html">Project Gray (primer)</a></li></ul></aside>
+    <article class="panel article">
+      <p class="wiki-cat mono">lore</p>
+      <h1>Lurker</h1>
+      <img src="../assets/lurker-hero.webp" alt="Lurker grinning, lure glowing" class="article-img" width="1280" height="720">
+<h2 id="who">Who he is</h2><p>Lurker is the anglerfish who holds up the light. He lives at the bottom of everything we make and greets anyone who wanders in from the dark. He has a lot of teeth. He insists they're for smiling.</p>
+<h2 id="lure">The lure</h2><p>The glowing lure is the "light" in Lurking Light: the one warm spot in the deep that everyone drifts toward. On the home page, you can poke it. He talks back. Poke it enough and something happens.</p>
+<h2 id="appearances">Where he shows up</h2><ul><li>The site hero and the swim-by easter egg</li><li><b>Lurker Shorts</b>, our tiny animated bits</li><li>Forum ranks: everyone starts as a "Lurker"</li></ul>
+      <p class="dev-note mono"><span class="badge stub-badge mono">dev wiki</span> Logged-in builders will see tuning notes here. <a href="../wiki-dev.html">Not built yet.</a></p>
+    </article>
+    <aside class="panel infobox"><dl><dt>Species</dt><dd>Anglerfish (deep-sea, probably)</dd><dt>Role</dt><dd>Mascot, greeter, glow accountant</dd><dt>Teeth</dt><dd>Many</dd><dt>Temperament</dt><dd>Friendly. Mostly.</dd><dt>First seen</dt><dd>Lurking Light mark v3</dd></dl></aside>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="foot-brand">
+    <img src="../assets/mark.svg" alt="" width="40" height="40">
+    <p class="wordmark"><span class="w-l">LURKING</span> <span class="w-r">LIGHT</span></p>
+    <p class="dim">Stories, games, and the nerds who make them. © <span id="yr">2026</span> Lurking Light.</p>
+  </div>
+  <div class="sitemap">
+    <div><h4 class="mono">public</h4><ul>
+      <li><a href="../index.html">Home &amp; lobby</a></li><li><a href="../studio.html">Studio</a></li>
+      <li><a href="../guild.html">Guild</a></li><li><a href="../forums.html">Forums (preview)</a></li>
+      <li><a href="../wiki.html">Wiki</a></li><li><a href="../games.html">Games &amp; guild hubs</a></li></ul></div>
+    <div><h4 class="mono">coming later</h4><ul>
+      <li><a href="../account.html">Account</a></li><li><a href="../wiki-dev.html">Dev wiki</a></li>
+      <li><a href="../hubs/forever.html">WoW Forever hub</a></li><li><a href="../hubs/retail.html">Retail hub</a></li>
+      <li><a href="../tools/index.html">Tools</a></li></ul></div>
+  </div>
+  <p class="mono dim tiny">psst: the lure likes being poked. and old cheat codes still work.</p>
+</footer>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<dialog id="profile" class="dialog" aria-labelledby="profTitle">
+  <h3 id="profTitle">Your glow</h3>
+  <p>You earn glow by poking around: visiting each part of the site, RSVPing to Friday Hang, posting and giving sparks in the forums. It's saved in this browser only. Real accounts come later.</p>
+  <ul class="quests" id="quests"></ul>
+  <form method="dialog"><button class="btn small">Back to the dark</button></form>
+</dialog>
+<img src="../assets/lurker-sprite.png" alt="" class="swimmer" id="swimmer" aria-hidden="true">
+<script src="../app.js"></script>
+</body>
+</html>

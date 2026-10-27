@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wiki — Lurking Light</title>
+<meta name="description" content="The public Lurking Light wiki: lore, community, and game notes.">
+<meta name="theme-color" content="#0E1B26">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="icon" type="image/svg+xml" href="assets/mark.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-face="guild" data-page="wiki" data-quest-page="wiki">
+<a class="skip" href="#main">Skip to content</a>
+<canvas id="snow" aria-hidden="true"></canvas>
+<div id="spot" aria-hidden="true"></div>
+<header class="nav">
+  <a class="brand" href="index.html" aria-label="Lurking Light home">
+    <img src="assets/mark.svg" alt="" width="36" height="36" id="navMark">
+    <span class="wordmark"><span class="w-l">LURKING</span> <span class="w-r">LIGHT</span></span>
+  </a>
+  <nav aria-label="Main"><ul><li><a href="index.html">Home</a></li><li><a href="studio.html">Studio</a></li><li><a href="guild.html">Guild</a></li><li><a href="forums.html">Forums</a></li><li><a href="wiki.html" class="active" aria-current="page">Wiki</a></li><li><a href="games.html">Games</a></li><li><a href="account.html" class="soon-link" title="Accounts are not built yet">Account <span class="soon-tag mono">soon</span></a></li></ul></nav>
+  <button class="hud" id="hudBtn" aria-haspopup="dialog" aria-controls="profile" title="Your glow">
+    <span class="hud-rank" id="hudRank">Lurker</span>
+    <span class="hud-bar"><span id="hudFill"></span></span>
+    <span class="hud-xp mono"><span id="hudXp">0</span> glow</span>
+  </button>
+</header>
+<main id="main">
+<section class="page-head">
+  <p class="eyebrow mono">// the wiki</p>
+  <h1>The Wiki <span class="cream">(public)</span></h1>
+  
+  <p class="lede">Lore, community how-tos, and game notes. Public pages are for everyone. The dev wiki (same pages plus tuning numbers) comes later, behind accounts.</p>
+</section>
+<section class="section tight" data-quest="wiki">
+  <form class="wiki-search" role="search" onsubmit="return false" aria-describedby="aiNote">
+    <label for="wikiQ" class="sr-only">Search the wiki</label>
+    <input id="wikiQ" type="search" placeholder="Ask the wiki anything…" disabled>
+    <button class="btn small" type="button" disabled>Ask</button>
+    <p id="aiNote" class="mono dim tiny"><span class="badge stub-badge mono">AI lookup coming later</span> Search is not wired up. Browse the pages below.</p>
+  </form>
+  <div class="wiki-layout">
+    <aside class="panel wiki-cats">
+      <h4 class="mono">categories</h4>
+      <ul>
+        <li><a href="#all" data-cat-filter="all">All pages</a> <span class="mono dim">4</span></li>
+        <li><a href="#lore" data-cat-filter="lore">Lore</a> <span class="mono dim">2</span></li>
+        <li><a href="#community" data-cat-filter="community">Community</a> <span class="mono dim">2</span></li>
+        <li class="dim">Games <span class="mono">soon</span></li>
+        <li class="dim">Builds &amp; guides <span class="mono">soon</span></li>
+      </ul>
+      <h4 class="mono">other wikis</h4>
+      <ul><li><a href="wiki-dev.html">Dev wiki</a> <span class="badge stub-badge mono">soon</span></li></ul>
+    </aside>
+    <div class="wiki-cards"><a class="panel wiki-card" href="wiki/lurker.html" data-cat="lore">
+  <span class="wiki-cat mono">lore</span><h3>Lurker</h3><p>Our anglerfish mascot. Friendly. Mostly.</p><span class="mono dim tiny">2 min read</span></a><a class="panel wiki-card" href="wiki/friday-hang.html" data-cat="community">
+  <span class="wiki-cat mono">community</span><h3>Friday Hang</h3><p>The weekly open-voice night and how to show up.</p><span class="mono dim tiny">2 min read</span></a><a class="panel wiki-card" href="wiki/glow-and-ranks.html" data-cat="community">
+  <span class="wiki-cat mono">community</span><h3>Glow &amp; ranks</h3><p>How glow, sparks, and the Lurker → Lightbearer ranks work.</p><span class="mono dim tiny">3 min read</span></a><a class="panel wiki-card" href="wiki/project-gray.html" data-cat="lore">
+  <span class="wiki-cat mono">lore</span><h3>Project Gray (primer)</h3><p>What we can say about the gray-skied world. Not much.</p><span class="mono dim tiny">2 min read</span></a></div>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="foot-brand">
+    <img src="assets/mark.svg" alt="" width="40" height="40">
+    <p class="wordmark"><span class="w-l">LURKING</span> <span class="w-r">LIGHT</span></p>
+    <p class="dim">Stories, games, and the nerds who make them. © <span id="yr">2026</span> Lurking Light.</p>
+  </div>
+  <div class="sitemap">
+    <div><h4 class="mono">public</h4><ul>
+      <li><a href="index.html">Home &amp; lobby</a></li><li><a href="studio.html">Studio</a></li>
+      <li><a href="guild.html">Guild</a></li><li><a href="forums.html">Forums (preview)</a></li>
+      <li><a href="wiki.html">Wiki</a></li><li><a href="games.html">Games &amp; guild hubs</a></li></ul></div>
+    <div><h4 class="mono">coming later</h4><ul>
+      <li><a href="account.html">Account</a></li><li><a href="wiki-dev.html">Dev wiki</a></li>
+      <li><a href="hubs/forever.html">WoW Forever hub</a></li><li><a href="hubs/retail.html">Retail hub</a></li>
+      <li><a href="tools/index.html">Tools</a></li></ul></div>
+  </div>
+  <p class="mono dim tiny">psst: the lure likes being poked. and old cheat codes still work.</p>
+</footer>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<dialog id="profile" class="dialog" aria-labelledby="profTitle">
+  <h3 id="profTitle">Your glow</h3>
+  <p>You earn glow by poking around: visiting each part of the site, RSVPing to Friday Hang, posting and giving sparks in the forums. It's saved in this browser only. Real accounts come later.</p>
+  <ul class="quests" id="quests"></ul>
+  <form method="dialog"><button class="btn small">Back to the dark</button></form>
+</dialog>
+<img src="assets/lurker-sprite.png" alt="" class="swimmer" id="swimmer" aria-hidden="true">
+<script src="app.js"></script>
+</body>
+</html>
